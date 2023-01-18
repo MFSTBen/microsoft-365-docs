@@ -42,7 +42,7 @@ Microsoft Teams is a widely used collaboration tool, where many users are now sp
 
 If licensed for Microsoft Defender for Office 365 (free 90-day evaluation available at aka.ms/trymdo) you can ensure seamless protection from zero-day malware and time of click protection within Microsoft Teams.
 
-[Learn More (SafeLinks)](https://docs.microsoft.com/microsoft-365/security/office-365-security/safe-links#safe-links-settings-for-microsoft-teams) & [Learn More (Safe Attachments)](https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/turn-on-mdo-for-spo-odb-and-teams?view=o365-worldwide#step-1-use-the-microsoft-365-defender-portal-to-turn-on-safe-attachments-for-sharepoint-onedrive-and-microsoft-teams) (Detailed Documentation)
+[Learn More (SafeLinks)](https://docs.microsoft.com/microsoft-365/security/office-365-security/safe-links#safe-links-settings-for-microsoft-teams) & [Learn More (Safe Attachments)](https://docs.microsoft.com/microsoft-365/security/office-365-security/turn-on-mdo-for-spo-odb-and-teams?view=o365-worldwide#step-1-use-the-microsoft-365-defender-portal-to-turn-on-safe-attachments-for-sharepoint-onedrive-and-microsoft-teams) (Detailed Documentation)
 
 1. **Login** to the security center's safe attachments configuration page at [https://security.microsoft.com/safeattachmentv2](https://security.microsoft.com/safeattachmentv2)
 2. Press **Global settings**
@@ -90,7 +90,7 @@ Applications are a very useful part of Microsoft teams, but it is recommended to
 ## Configure meeting settings
 
 You can reduce the attack surface by ensuring people outside your organization cannot request access to control presenter's screens and require dial in and all external people to be authenticated & admitted from a meeting lobby.
-[Learn more](https://docs.microsoft.com/en-US/microsoftteams/meeting-policies-participants-and-guests) (detailed documentation)
+[Learn more](https://docs.microsoft.com/microsoftteams/meeting-policies-participants-and-guests) (detailed documentation)
 
 1. **Login** to the Teams admin center at: https://admin.teams.microsoft.com/
 2. On the left-hand navigation, expand **Meetings** and then choose **Meeting Policies**
