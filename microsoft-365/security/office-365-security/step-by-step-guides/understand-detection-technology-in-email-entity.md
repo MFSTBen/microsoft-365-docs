@@ -23,7 +23,7 @@ This article is all about helping you **understand the different detection techn
 
 ## Detection technology details table
 
-To resolve false positives like the ones listed in the table below, you should always start with an **admin submission**, which will also prompt you to add an entry into the Tenant Allow/Block List (TABL). This entry adds a temporary override signal to the filters that determined the message was *malicious*, while filters are updated (if that's appropriate). See the articles below for more information on Admin submissions & TABL.
+To resolve false positives for detections listed in the table below, you should always start with an **admin submission**, which will also prompt you to add an entry into the Tenant Allow/Block List (TABL). This entry adds a temporary override signal to the filters that determined the message was *malicious*, while filters are updated (if that's appropriate). See the articles below for more information on Admin submissions & TABL.
 
 - [Submissions: Report good email to Microsoft](../submissions-admin.md)
 - [Tenant Allow/Block List](../tenant-allow-block-list-about.md)
