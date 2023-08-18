@@ -5,11 +5,14 @@ f1.keywords:
 ms.author: efrene
 author: efrene
 manager: scotv
+ms.date: 07/26/2021
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: microsoft-365-business
 ms.localizationpriority: medium
 ms.collection:
+- Tier2
+- scotvorg
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
@@ -29,7 +32,7 @@ description: "Learn how to connect to data in your Microsoft 365 Government Comm
 Use the following procedures to connect to your data with the Microsoft 365 Usage Analytics report in a Microsoft 365 Government Community Cloud (GCC) tenant. 
 
 > [!NOTE]
-> These instructions are specifically for Microsoft 365 GCC tenants. 
+> These instructions are specifically for Microsoft 365 GCC tenants and are not applicate to GCC HIgh and DOD.
 
 ## Before you begin
 

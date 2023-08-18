@@ -6,13 +6,17 @@ ms.author: cmcatee
 author: cmcatee-MSFT
 manager: scotv
 audience: Admin
-ms.topic: article
-ms.service: o365-administration
+ms.topic: how-to
+ms.service: microsoft-365-business
 ms.localizationpriority: high
 ms.collection: 
+- Tier1
+- scotvorg
+- highpri
 - Adm_O365
 - Adm_TOC
 ms.custom: 
+- VSBFY23
 - AdminSurgePortfolio
 - adminvideo
 - AdminTemplateSet
@@ -22,56 +26,56 @@ search.appverid:
 - MET150
 - MOE150
 description: "Learn how to get online or phone support for your Microsoft 365 for business subscription. You must be an admin for a business subscription to get support."
+ms.date: 07/25/2023
 ---
 
 # Get support for Microsoft 365 for business
 
 ::: moniker range="o365-worldwide"
 
+Check out all of our small business content on [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
+
+Check out [Microsoft 365 small business help](https://go.microsoft.com/fwlink/?linkid=2197659) on YouTube.
+
 ## Watch: Get help or support
+
+Check out this video and others on our [YouTube channel](https://go.microsoft.com/fwlink/?linkid=2197598).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOgo?autoplay=false]
 
 Need to speak to someone right away? Admins, have your account details ready when you call Support.
 
 > [!IMPORTANT]
-> You must be an admin for a business subscription to use these support methods. If you're not a business admin, please use [this support page](https://support.microsoft.com/contactus).
+> You must be an admin for a business subscription to use these support methods. [Find out more about admin roles for the Microsoft 365 admin center](add-users/about-admin-roles.md). If you're not a business admin, please use [this support page](https://support.microsoft.com/contactus).
 
 Start by [checking the current health of your services](../enterprise/view-service-health.md). You can view detailed information about current and past issues on the <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">Service health dashboard</a>. If you're experiencing an issue that isn't listed, you can get support in one of the following ways:
 
 ## Online support
 
-Save time by starting your service request online. We'll help you find a solution or connect you to technical support.
+Save time by starting your service request online. We can help you find a solution or connect you to technical support.
 
-1. Go to the admin center at <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">https://admin.microsoft.com</a>. If you get a message that says you don't have permission to access this page or perform this action, you aren't an admin. For more information, see [Who has admin permissions in my business?](../admin/admin-overview/admin-center-overview.md#who-has-admin-permissions-in-my-business).
+> [!IMPORTANT]
+> You must have bought at least one subscription through Microsoft to access Microsoft support. If you bought all your subscriptions through a partner, contact your partner for support.
+
+1. Go to the admin center at <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a>. If you get a message that says you don't have permission to access this page or perform this action, you aren't an admin. For more information, see [Who has admin permissions in my business?](../admin/admin-overview/admin-center-overview.md#who-has-admin-permissions-in-my-business).
 2. On the bottom right side of the page, select **Help & support**.
 3. Type a question or keyword into the text box. If you get a drop-down list, select the one closest to your question, or continue typing your question, then press **Enter**.
 4. If the results don't help, at the bottom, select **Contact Support**.
 5. Enter a description of your issue, confirm your contact number and email address, select your preferred contact method, and then select **Contact me**. The expected wait time is indicated in the **Contact support** pane.
 
-    > [!NOTE]
-    > If you bought your subscription through a partner, you first see the contact information for that partner. Alternatively, select **New Microsoft service request** at the bottom of the pane.
-
 ## Phone support
 
-Billing support is provided in English from 9 AM-5 PM (9 AM-6 PM in Australia), Monday-Friday.\
-Technical support is provided in English 24 hours a day, 7 days a week.\
+In most countries/regions, billing support for Microsoft 365 for business products and services is provided in English from 9 AM-5 PM, Monday through Friday. Local language support varies by country/region.
+
+Technical support is provided in English 24 hours a day, 7 days a week, and in some cases, in local languages as noted.
+
+>[!div class="nextstepaction"]
+>[Find support phone numbers by country or region](support-contact-info.md)
+
 Admins, have your account details ready when you call.
 
 > [!NOTE]
-> To better protect your organization, we added a PIN-based verification step to our existing phone-based verification process. If you contact us from a number that isn't registered with your organization profile, the Microsoft support representative sends a verification code to the registered email or phone number in your Microsoft 365 admin center profile. You must provide this code to the support representative to grant them access to your organization’s account.
-
-- **In the United States, call 1 800 865 9408.**
-
-- **In Australia, call 1 800 197 503.**
-
-- **In Canada, call 1 800 865 9408.**
-
-- **In the United Kingdom, call 0800 032 6417.**
-
-If your support phone number isn't listed above, use the drop-down menu below to find the number for your country or region.
-
-[!INCLUDE [country-region-support-dropdown-list](../admin/includes/country-region-support-dropdown-list.md)]
+> To better protect your organization, we added a PIN-based verification step to our existing phone-based verification process. If you contact us from a number that isn't registered with your organization profile, the Microsoft support representative sends a verification code to the registered email or phone number in your Microsoft 365 admin center profile. You must provide this code to the support representative to grant them access to your organization's account.
 
 ## Small business support with Business Assist
 
@@ -130,7 +134,7 @@ Technical support for Office 365 operated by 21Vianet subscriptions provides ass
 | Severity level | Operations and support description | Examples |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Sev A (Critical) | One or more services aren't accessible or are unusable. Production, operations, or deployment deadlines are severely affected, or there will be a severe impact on production or profitability. Multiple users or services are affected. | <ul><li>Widespread problems sending or receiving mail.</li><li>SharePoint site down.</li><li>All users can't send instant messages, join or schedule Skype for Business Meetings, or make Skype for Business calls.</li></ul> |
-| Sev B (High) | The service is usable but in an impaired fashion. The situation has moderate business impact and can be dealt with during business hours. A single user, customer, or service is partially affected. | <ul><li>Send button in Outlook is garbled.</li><li>Setting is impossible from EAC (Exchange admin center) but possible in Windows PowerShell.</li></ul> |
+| Sev B (High) | The service is usable but in an impaired fashion. The situation has moderate business impact and can be dealt with during business hours. A single user, customer, or service is partially affected. | <ul><li>Send button in Outlook is garbled.</li><li>Setting is impossible from EAC (Exchange admin center) but possible in Exchange Online PowerShell.</li></ul> |
 | Sev C (Non-critical) | The situation has minimal business impact. The issue is important but does not have a significant current service or productivity impact for the customer. A single user is experiencing partial disruption, but an acceptable workaround exists. | <ul><li>How to set user password that never expires.</li> <li>User can't delete contact information in Exchange Online.</li></ul> |
 
 ## Technical support initial response times
@@ -218,5 +222,5 @@ Scan this QR code to follow us on WeChat and get the latest updates for Office 3
 ## Related content
 
 [Find docs and training](index.yml) (link page)\
-[Employee quick setup](setup/employee-quick-setup.md) (article)\
+[Employee quick setup](https://support.microsoft.com/office/7f34c318-e772-46a5-8c0a-ab86661542d1) (article)\
 [Overview of Microsoft 365 Business Premium setup](setup/plan-your-setup.md) (video)

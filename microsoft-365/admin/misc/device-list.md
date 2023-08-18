@@ -3,13 +3,16 @@ title: "Device list CSV-file"
 f1.keywords:
 - NOCSH
 ms.author: kwekua
-author: kwekua
+author: kwekuako
 manager: scotv
+ms.date: 02/18/2020
 audience: Admin
 ms.topic: overview
-ms.service: o365-administration
+ms.service: microsoft-365-business
 ms.localizationpriority: medium
 ms.collection: 
+- Tier3
+- scotvorg
 - M365-subscription-management 
 - Adm_O365
 - Adm_NonTOC

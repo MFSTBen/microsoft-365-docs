@@ -2,19 +2,24 @@
 title: Recommendation methods and properties
 description: Retrieves the top recent alerts.
 keywords: apis, graph api, supported apis, get, alerts, recent
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
-ms.author: dolmont
-author: DulceMontemayor
+ms.author: dansimp
+author: dansimp
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: article
-MS.technology: mde
+ms.collection: 
+- m365-security
+- tier3
+- must-keep
+ms.topic: reference
+ms.subservice: mde
 ms.custom: api
+search.appverid: met150
+ms.date: 12/18/2020
 ---
 
 # Recommendation resource type
@@ -80,3 +85,4 @@ Want to experience Defender for Endpoint? [Sign up for a free trial.](https://si
 |nonProductivityImpactedAssets|Long|Number of devices that are not affected|
 |relatedComponent|String|Related software component|
 |
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

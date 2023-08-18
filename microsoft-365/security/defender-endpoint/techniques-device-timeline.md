@@ -4,7 +4,7 @@ description: Understanding the device timeline in Microsoft Defender for Endpoin
 keywords: device timeline, endpoint, MITRE, MITRE ATT&CK, techniques, tactics
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -13,9 +13,12 @@ author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: article
-ms.technology: mde
+ms.collection: 
+- m365-security
+- tier2
+ms.topic: conceptual
+ms.subservice: mde
+ms.date: 03/15/2021
 ---
 
 # Techniques in the device timeline
@@ -90,3 +93,4 @@ To view only either events or techniques, select **Filters** from the device tim
 
 - [View and organize the Devices list](machines-view-overview.md)
 - [Microsoft Defender for Endpoint device timeline event flags](device-timeline-event-flag.md)
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

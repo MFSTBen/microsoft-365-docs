@@ -3,7 +3,8 @@ title: Top scoring in industry tests - Microsoft 365 Defender
 ms.reviewer:
 description: View the latest scores and analysis of Microsoft 365 Defender. It consistently achieves high scores in independent tests (AV-TEST, AV Comparatives, SE Labs, MITRE ATT&CK). View the latest scores and analysis.
 keywords: Microsoft Defender Antivirus, Windows Defender Antivirus, av reviews, antivirus test, av testing, latest av scores, detection scores, security product testing, security industry tests, industry antivirus tests, best antivirus, av-test, av-comparatives, SE labs, MITRE ATT&CK, endpoint protection platform, EPP, endpoint detection and response, EDR, Windows 10, Windows 11 Microsoft Defender Antivirus, WDAV, Microsoft Defender for Endpoint, Microsoft 365 Defender, security, malware, av, antivirus, scores, scoring, next generation protection, ranking, success
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: high
@@ -11,10 +12,12 @@ ms.author: dansimp
 author: dansimp
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: article
+ms.collection: 
+  -m365-security-compliance
+  - tier3
+ms.topic: conceptual
 search.appverid: met150
-ms.technology: m365d
+ms.date: 02/16/2021
 ---
 
 # Top scoring in industry tests
@@ -33,6 +36,8 @@ Microsoft 365 Defender combines the capabilities of [Microsoft Defender for Endp
 
 Core to MITRE's testing approach is emulating real-world attacks to understand whether solutions can adequately detect and respond to them. While the test focused on endpoint detection and response, MITRE's simulated APT29 attack spans multiple attack domains, creating opportunities to empower defenders beyond just endpoint protection. Microsoft expanded visibility beyond the endpoint with Microsoft 365 Defender.
 
+- ATT&CK-based evaluation of Microsoft 365 Defender - April 2022: [Microsoft 365 Defender demonstrates industry-leading protection in the 2022 MITRE Engenuity ATT&CK® Evaluations]([Microsoft Security Blog: Microsoft 365 Defender demonstrates industry-leading protection in the 2022 MITRE Engenuity ATT&CK® Evaluations](https://www.microsoft.com/en-us/security/blog/2022/04/05/microsoft-365-defender-demonstrates-industry-leading-protection-in-the-2022-mitre-engenuity-attck-evaluations/))
+
 - ATT&CK-based evaluation of Microsoft 365 Defender - April 2021: [Evaluation proves Microsoft Defender for Endpoint stops advanced attacks across platforms](https://www.microsoft.com/security/blog/2021/04/21/)
 
  Microsoft 365 Defender provided nearly 100 percent coverage across the attack chain stages. It delivered leading out-of-box visibility into attacker activities. The visibility dramatically reduces manual work for the security operations center and vendor solutions that relied on specific configuration changes. Microsoft 365 Defender also had the fewest gaps in visibility, diminishing attacker ability to operate undetected.
@@ -46,6 +51,8 @@ Microsoft Defender Antivirus is the [next generation protection](https://www.you
 ### AV-TEST: Protection score of 6.0/6.0 in the latest test
 
 The AV-TEST Product Review and Certification Report tests on three categories: protection, performance, and usability. The following scores are for the Protection category that has two scores: Real-World Testing and the AV-TEST reference set (known as "Prevalent Malware").
+
+- 2022 AV-TEST Award – for tested IT Security:  [Best Advanced Protection for Consumer Users and Best Advanced Protection](https://www.av-test.org/en/news/av-test-award-2022-for-microsoft/)
 
 - November - December 2021 AV-TEST Business User test: [Protection score 6.0/6.0](https://www.av-test.org/en/antivirus/business-windows-client/windows-10/december-2021/microsoft-defender-antivirus-4.18-212622/) <sup>**Latest**</sup>
 
@@ -78,6 +85,8 @@ Business Security Test consists of three main parts: the Real-World Protection T
 ### SE Labs: AAA award in the latest test
 
 SE Labs test a range of solutions used by products and services to detect and/or protect against attacks. It includes endpoint software, network appliances, and cloud services.
+
+- Best Email Security Service of 2023: [AAA award](https://www.microsoft.com/en-us/security/blog/2023/02/21/microsoft-defender-for-office-365-named-best-email-security-service-of-2023-by-se-labs/)
 
 - Annual Report 2020 - 2021: [AAA award](https://selabs.uk/wp-content/uploads/2021/11/annual-report-2021.pdf) <sup>**Latest**</sup>
 
@@ -112,3 +121,4 @@ The capabilities within Microsoft Defender for Endpoint provide [additional laye
 [Learn more about Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) and evaluate it in your own network by signing up for a [90-day trial](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp), or [enabling Preview features on existing tenants](/windows/security/threat-protection/microsoft-defender-atp/preview).
 
 [Learn more about Microsoft 365 Defender](https://www.microsoft.com/security/business/threat-protection/integrated-threat-protection) or [start using the service](m365d-enable.md).
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

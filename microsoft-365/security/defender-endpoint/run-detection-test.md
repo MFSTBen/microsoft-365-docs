@@ -1,21 +1,22 @@
 ---
 title: Run a detection test on a device to verify it has been properly onboarded to Microsoft Defender for Endpoint
-description: Run the detection test script on a device recently onboarded to the Microsoft Defender for Endpoint service to verify that it is properly added.
+description: Run the detection test script on a device recently onboarded to the Microsoft Defender for Endpoint service to verify that it's properly added.
 search.appverid: met150
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 ms.author: macapara
 author: mjcaparas
 ms.localizationpriority: medium
+ms.date: 04/24/2023
 manager: dansimp
 audience: ITPro
-ms.collection:
-  - m365-security-compliance
-  - m365-initiative-defender-endpoint
-ms.topic: article
-ms.technology: mde
+ms.collection: 
+- m365-security
+- tier1
+ms.topic: conceptual
+ms.subservice: mde
 ---
 
 # Run a detection test on a newly onboarded Microsoft Defender for Endpoint device
@@ -31,6 +32,7 @@ ms.technology: mde
 - Windows Server, version 1803
 - Windows Server 2019
 - Windows Server 2022
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -42,10 +44,9 @@ Making sure, or verifying, that a device has been added to the service successfu
 
 ## Verify Microsoft Defender for Endpoint onboarding of a device using a PowerShell detection test
 
-Run the following PowerShell script on a newly onboarded device to verify that it is properly reporting to the Defender for Endpoint service.
+Run the following PowerShell script on a newly onboarded device to verify that it's properly reporting to the Defender for Endpoint service.
 
-1. Create a folder: 'C:\test-MDATP-test'.
-2. Open an elevated command-line prompt on the device and run the script:
+1. Open an elevated command-line prompt on the device and run the script:
 
    1. Go to **Start** and type **cmd**.
 
@@ -53,16 +54,20 @@ Run the following PowerShell script on a newly onboarded device to verify that i
 
       :::image type="content" source="images/run-as-admin.png" alt-text="The Start menu pointing to Run as administrator" lightbox="images/run-as-admin.png":::
     
-3. At the prompt, copy and run the following command:
+2. At the prompt, copy and run the following command:
 
    ```powershell
    powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe');Start-Process 'C:\\test-MDATP-test\\invoice.exe'
    ```
 
-The Command Prompt window will close automatically. If successful, a new alert will appear in the portal for the onboarded device in about ten minutes.
+The Command Prompt window closes automatically. If successful, a new alert appears in the portal for the onboarded device in about 10 minutes.
+
+> [!NOTE]
+> You can also use the EICAR test string to perform this test. Create a text file, paste the EICAR line, and save the file as an executable file to your endpoint's local drive. You will receive a test endpoint notification and an alert in the Microsoft 365 Defender portal.
 
 ## Related topics
 
 - [Onboard Windows devices](configure-endpoints.md)
 - [Onboard servers](configure-server-endpoints.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding)
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

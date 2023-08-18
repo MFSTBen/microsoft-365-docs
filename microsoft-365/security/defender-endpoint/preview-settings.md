@@ -4,7 +4,7 @@ description: Turn on the preview experience in Microsoft Defender for Endpoint t
 keywords: advanced features, settings, block file
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -13,10 +13,14 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: article
-ms.technology: mde
+ms.collection: 
+- m365-security
+- tier2
+ms.topic: conceptual
+ms.subservice: mde
+ms.date: 12/18/2020
 ---
+
 # Turn on the preview experience in Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
@@ -44,3 +48,4 @@ Turn on the preview experience setting to be among the first to try upcoming fea
 - [Configure email notifications in Microsoft Defender for Endpoint](configure-email-notifications.md)
 
 
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

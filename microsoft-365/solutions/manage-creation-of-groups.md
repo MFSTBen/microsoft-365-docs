@@ -1,15 +1,17 @@
 ---
-title: "Manage who can create Microsoft 365 Groups"
+title: Manage who can create Microsoft 365 Groups
 f1.keywords: NOCSH
 ms.author: mikeplum
-ms.reviewer: arvaradh
+ms.reviewer: rahulnayak
+ms.date: 07/28/2023
 author: MikePlumleyMSFT
 manager: serdars
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: o365-solutions
 ms.localizationpriority: medium
 ms.collection: 
+- highpri
 - M365-subscription-management
 - Adm_O365
 - m365solution-collabgovernance
@@ -17,7 +19,7 @@ search.appverid:
 - MET150
 ms.assetid: 4c46c8cb-17d0-44b5-9776-005fced8e618
 recommendations: false
-description: "Learn how to control which users can create Microsoft 365 Groups."
+description: Learn how to control which users can create Microsoft 365 Groups.
 ---
 
 # Manage who can create Microsoft 365 Groups
@@ -32,9 +34,8 @@ When you limit who can create a group, it affects all services that rely on grou
 
 - Outlook
 - SharePoint
-- Yammer
+- Viva Engage
 - Microsoft Teams
-- Microsoft Stream
 - Planner
 - Power BI (classic)
 - Project for the web / Roadmap
@@ -89,7 +90,7 @@ You must use the preview version of [Azure Active Directory PowerShell for Graph
 
 - If you have the 2.0 general availability version of the Azure AD PowerShell module (AzureAD) installed, you must uninstall it by running `Uninstall-Module AzureAD` in your PowerShell session, and then install the preview version by running `Install-Module AzureADPreview`.
 
-- If you have already installed the preview version, run `Install-Module AzureADPreview` to make sure it's the latest version of this module.
+- If you have already installed the preview version, run `Update-Module AzureADPreview` to make sure it's the latest version of this module.
 
 Copy the script below into a text editor, such as Notepad, or the [Windows PowerShell ISE](/powershell/scripting/components/ise/introducing-the-windows-powershell-ise).
 

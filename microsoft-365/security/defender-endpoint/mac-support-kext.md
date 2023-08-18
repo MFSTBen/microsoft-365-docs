@@ -2,7 +2,7 @@
 title: Troubleshoot kernel extension issues in Microsoft Defender for Endpoint on macOS
 description: Troubleshoot kernel extension-related issues in Microsoft Defender for Endpoint on macOS.
 keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, kernel, extension
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -11,10 +11,13 @@ author: dansimp
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection:
-  - m365-security-compliance
+ms.collection: 
+- m365-security
+- tier3
 ms.topic: conceptual
-ms.technology: mde
+ms.subservice: mde
+search.appverid: met150
+ms.date: 12/18/2020
 ---
 
 # Troubleshoot kernel extension issues in Microsoft Defender for Endpoint on macOS
@@ -35,6 +38,9 @@ This article provides information on how to troubleshoot issues with the kernel 
 
 Starting with macOS High Sierra (10.13), macOS requires all kernel extensions to be explicitly approved before they're allowed to run on the device.
 
+>[!TIP]
+>Kernel extensions only apply up to macOS Catalina (10.15).  Starting with macOS BigSur (11), Microsoft Defender for Endpoint on macOS uses System Extensions.
+
 If you didn't approve the kernel extension during the deployment/installation of Microsoft Defender for Endpoint on macOS, the application displays a banner prompting you to enable it:
 
 :::image type="content" source="images/mdatp-32-main-app-fix.png" alt-text="RTP disabled" lightbox="images/mdatp-32-main-app-fix.png":::
@@ -46,8 +52,8 @@ mdatp health
 ```
 ```Output
 ...
-real_time_protection_enabled                : false
-real_time_protection_available              : true
+real_time_protection_enabled                : true
+real_time_protection_available              : false
 ...
 ```
 
@@ -104,3 +110,4 @@ In this case, you need to perform the following steps to trigger the approval fl
     real_time_protection_available              : true
     ...
     ```
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

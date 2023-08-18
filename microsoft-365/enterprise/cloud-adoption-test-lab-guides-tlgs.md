@@ -5,12 +5,13 @@ author: kelleyvice-msft
 manager: scotv
 ms.date: 11/14/2019
 audience: ITPro
-ms.topic: landing-page
-ms.service: o365-solutions
+ms.topic: conceptual
+ms.service: microsoft-365-enterprise
 ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: 
+- scotvorg
 - Ent_O365
 - Strat_O365_Enterprise
 f1.keywords:

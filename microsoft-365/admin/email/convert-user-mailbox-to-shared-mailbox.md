@@ -5,11 +5,14 @@ f1.keywords:
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms.date: 02/18/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: microsoft-365-business
 ms.localizationpriority: medium
 ms.collection:
+- Tier2
+- scotvorg
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
@@ -97,7 +100,7 @@ After deleting a user account, follow these steps to convert their old mailbox t
 
 1. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange admin center</a>.
 
-2. Select **Recipients** \> **Shared**.
+2. Select **Recipients** \> **Mailboxes**.
 
 3. Select the shared mailbox. Under **Convert to Regular Mailbox**, select **Convert**.
 

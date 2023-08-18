@@ -3,13 +3,15 @@ title: "Add a domain to a client tenancy with Windows PowerShell for DAP partner
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
+ms.date: 08/10/2023
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: microsoft-365-enterprise
 ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection:
+- scotvorg
 - Ent_O365
 - M365-subscription-management
 f1.keywords:
@@ -53,7 +55,7 @@ You also need the following information:
 
 ### Create the domain in Azure Active Directory
 
-This command creates the domain in Azure Active Directory but does not associate it with the publicly registered domain. That comes when you prove that you own the publicly registered domain to Microsoft Microsoft 365 for enterprises.
+This command creates the domain in Azure Active Directory but does not associate it with the publicly registered domain. That comes when you prove that you own the publicly registered domain to Microsoft 365 for enterprises.
 
 ```powershell
 New-MsolDomain -TenantId <customer TenantId> -Name <FQDN of new domain>

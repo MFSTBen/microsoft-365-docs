@@ -6,7 +6,7 @@ manager: scotv
 ms.date: 5/10/2019
 audience: Admin
 ms.topic: conceptual
-ms.service: o365-administration
+ms.service: microsoft-365-enterprise
 ms.localizationpriority: medium
 f1.keywords:
 - CSH
@@ -19,6 +19,7 @@ search.appverid:
 - BCS160
 ms.assetid: e241e5d9-b1d8-4f1d-a5c8-4106b7325f8c
 ms.collection:
+- scotvorg
 - M365-security-compliance
 - Ent_O365
 description: This article can help you troubleshoot Office 365 performance issues and even fix some of the most common issues.
@@ -335,7 +336,7 @@ A four second delay in proxy authentication as seen in Wireshark. The **Time del
 
 ### DNS Performance
 
-Name resolution works best and most quickly when it takes place as close to the client's country as possible.
+Name resolution works best and most quickly when it takes place as close to the client's country/region as possible.
 
 If DNS name resolution is taking place overseas, it can add seconds to page loads. Ideally, name resolution happens in under 100ms. If not, you should do further investigation.
 

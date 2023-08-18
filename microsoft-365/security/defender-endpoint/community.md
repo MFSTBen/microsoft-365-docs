@@ -2,7 +2,7 @@
 title: Access the Microsoft Defender for Endpoint Community Center
 description: Access the Microsoft Defender for Endpoint Community Center to share experiences, engage, and learn about the product.
 keywords: community, community center, tech community, conversation, announcements
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -11,10 +11,13 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
+ms.collection: 
+- m365-security
+- tier3
 ms.topic: conceptual
 ms.date: 04/24/2018
-ms.technology: mde
+ms.subservice: mde
+search.appverid: met150
 ---
 
 
@@ -47,3 +50,4 @@ There are several ways you can access the Community Center:
 You can instantly view and read conversations that have been posted in the community.
 
 To get the full experience within the community such as being able to comment on posts, you'll need to join the community. For more information on how to get started in the Microsoft Tech Community, see [Microsoft Tech Community: Getting Started](https://techcommunity.microsoft.com/t5/Getting-Started/Microsoft-Tech-Community-Getting-Started-Guide/m-p/77888#M15).
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

@@ -2,7 +2,7 @@
 title: Review alerts in Microsoft Defender for Endpoint
 description: Review alert information, including a visualized alert story and details for each step of the chain.
 keywords: incident, incidents, machines, devices, users, alerts, alert, investigation, graph, evidence
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.pagetype: security
 f1.keywords: 
   - NOCSH
@@ -12,11 +12,12 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security-compliance
-  - m365-initiative-defender-endpoint
+  - m365-security
+  - tier1
 ms.topic: conceptual
 ms.date: 5/1/2020
-ms.technology: mde
+ms.subservice: mde
+search.appverid: met150
 ---
 
 # Review alerts in Microsoft Defender for Endpoint
@@ -25,6 +26,8 @@ ms.technology: mde
 
 
 **Applies to:**
+
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-managealerts-abovefoldlink)
@@ -64,6 +67,9 @@ You can then also review the *automated investigation details* in your alert's d
 
 Other information available in the details pane when the alert opens includes MITRE techniques, source, and additional contextual details.
 
+> [!NOTE]
+> If you see an *Unsupported alert type* alert status, it means that automated investigation capabilities cannot pick up that alert to run an automated investigation. However, you can [investigate these alerts manually](../defender/investigate-incidents.md#alerts).
+
 ## Review affected assets
 
 Selecting a device or a user card in the affected assets sections will switch to the details of the device or user in the details pane.
@@ -81,3 +87,4 @@ Selecting a device or a user card in the affected assets sections will switch to
 - [View and organize the incidents queue](view-incidents-queue.md)
 - [Investigate incidents](investigate-incidents.md)
 - [Manage incidents](manage-incidents.md)
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

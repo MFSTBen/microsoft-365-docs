@@ -6,11 +6,16 @@ manager: scotv
 ms.date: 09/30/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: microsoft-365-enterprise
 ms.localizationpriority: medium
 ms.collection: 
+- scotvorg
 - Strat_O365_IP
 - m365initiative-coredeploy
+- m365solution-m365-identity
+- m365solution-scenario
+- zerotrust-solution
+- highpri
 search.appverid:
 - MET150
 - MOE150
@@ -28,6 +33,8 @@ ms.custom: seo-marvel-apr2020
 
 *This article applies to both Microsoft 365 Enterprise and Office 365 Enterprise.*
 
+Check out all of our small business content on [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
+
 Security breaches of a Microsoft 365 tenant, including information harvesting and phishing attacks, are typically done by compromising the credentials of a Microsoft 365 privileged account. Security in the cloud is a partnership between you and Microsoft:
   
 - Microsoft cloud services are built on a foundation of trust and security. Microsoft provides you security controls and capabilities to help you protect your data and applications.
@@ -41,6 +48,9 @@ Microsoft provides capabilities to help protect your organization, but they're e
 2. Configure multi-factor authentication (MFA) for your dedicated Microsoft 365 privileged accounts and use the strongest form of secondary authentication.
 
 3. Protect privileged accounts with Zero Trust identity and device access recommendations.
+
+> [!NOTE]
+> To secure your privileged roles, check out [Best practices for Azure AD roles](/azure/active-directory/roles/best-practices) to secure privileged access to your tenant.
 
 ## 1. Create dedicated, privileged, cloud-based user accounts and use them only when necessary
 
@@ -65,7 +75,6 @@ Multi-factor authentication (MFA) requires additional information beyond the acc
 - A smart card (virtual or physical) (requires federated authentication)
 - A biometric device
 - Oauth token
-- 
     
 >[!Note]
 >For organizations that must adhere to National Institute of Standards and Technology (NIST) standards, the use of a phone call or text message-based additional verification methods are restricted. Click [here](https://pages.nist.gov/800-63-FAQ/#q-b01) for the details.
@@ -100,19 +109,21 @@ To enable Azure PIM for your Azure AD tenant and administrator accounts, see the
 
 To develop a comprehensive roadmap to secure privileged access against cyber attackers, see [Securing privileged access for hybrid and cloud deployments in Azure AD](/azure/active-directory/admin-roles-best-practices).
 
-### Azure AD Privileged Identity Management
+### Privileged Identity Management
 
-Rather than having your privileged accounts be permanently assigned an administrator role, you can use Azure AD PIM to enable on-demand, just-in-time assignment of the administrator role when it's needed.
+Rather than having your privileged accounts be permanently assigned an administrator role, you can use PIM to enable on-demand, just-in-time assignment of the administrator role when it's needed.
   
 Your administrator accounts go from being permanent admins to eligible admins. The administrator role is inactive until someone needs it. You then complete an activation process to add the administrator role to the privileged account for a predetermined amount of time. When the time expires, PIM removes the administrator role from the privileged account.
   
 Using PIM and this process significantly reduces the amount of time that your privileged accounts are vulnerable to attack and use by malicious users.
 
-PIM is available with Azure Active Directory Premium P2, which is included with Microsoft 365 E5. Alternately, you can purchase individual Azure Active Directory Premium P2 licenses for your administrator accounts.
+Using this feature requires either Microsoft Entra ID Governance or Microsoft Azure AD Premium P2 subscriptions. To find the right license for your requirements, see [Compare generally available features of Microsoft Azure AD](https://www.microsoft.com/security/business/identity-access-management/azure-ad-pricing).
+
+For information about licenses for users, see [License requirements to use Privileged Identity Management](/azure/active-directory/privileged-identity-management/subscription-requirements).
   
 For more information, see:
 
-- [Azure AD Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure).
+- [Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure).
 - [Securing privileged access for hybrid and cloud deployments in Azure AD](/azure/active-directory/roles/security-planning)
   
 
@@ -128,9 +139,9 @@ In this step, you'll enable privileged access management in your tenant and conf
 
 Privileged access management enables your organization to operate with zero standing privileges and provide a layer of defense against vulnerabilities arising because of such standing administrative access. Privileged access requires approvals for executing any task that has an associated approval policy defined. Users needing to execute tasks included in the approval policy must request and be granted access approval.
 
-To enable privileged access management, see [Configure privileged access management](/office365/securitycompliance/privileged-access-management-configuration).
+To enable privileged access management, see [Get started with privileged access management](/microsoft-365/compliance/privileged-access-management-configuration).
 
-For more information, see [Privileged access management](/office365/securitycompliance/privileged-access-management-overview).
+For more information, see [Learn about privileged access management](/microsoft-365/compliance/privileged-access-management).
 
 ### Security information and event management (SIEM) software for Microsoft 365 logging
 

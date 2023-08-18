@@ -3,10 +3,14 @@ title: "Schedule business closures, time off, and vacation time"
 ms.author: kwekua
 author: kwekuako
 manager: scotv
+ms.date: 06/24/2020
 audience: Admin
 ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
+ms.collection:
+- Tier1
+- scotvorg
 ms.assetid: e3c0a4ee-e3d8-4fbe-bd8f-16d1c712d1f4
 description: "Schedule office closures and employee time off from the Bookings calendar so that employees are marked as unavailable for bookings during the specified times."
 ---
@@ -25,7 +29,7 @@ Schedule business closures or employee off.
 
 1. In Microsoft 365, select the app launcher, and then select **Bookings**.
 
-1. Choose your calendar. 
+1. Choose your calendar.
 
 1. In the top navigation pane, select **Add time off**.
 

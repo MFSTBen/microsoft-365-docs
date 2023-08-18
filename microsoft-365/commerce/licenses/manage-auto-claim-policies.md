@@ -1,16 +1,18 @@
 ---
-title: "Manage auto-claim policies"
+title: "Manage auto-claim policies in the Microsoft 365 admin center"
 f1.keywords:
 - CSH
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: yinggiy, pablom
+ms.reviewer: argani, pablom
 audience: Admin
-ms.topic: article
-ms.service: o365-administration
+ms.topic: how-to
+ms.service: microsoft-365-business
 ms.localizationpriority: medium
 ms.collection: 
+- Tier1
+- scotvorg
 - M365-subscription-management
 - Adm_O365
 ms.custom: 
@@ -18,19 +20,19 @@ ms.custom:
 - AdminSurgePortfolio
 description: "Learn how to create and manage auto-claim policies that automatically assign licenses to users for certain apps."
 search.appverid: MET150
-ms.date: 04/06/2021
+ms.date: 07/24/2023
 ---
 
-# Manage auto-claim policies
+# Manage auto-claim policies in the Microsoft 365 admin center
 
-An auto-claim policy lets users automatically claim a license for a product the first time that they sign into an app. As an admin, you typically assign licenses to users either manually, or by using group-based licensing. By using auto-claim policies, you manage the products for which users can automatically claim licenses. You can also control which products those licenses come from.
+As an admin, you typically assign licenses to users either manually, or by using group-based licensing. An *auto-claim policy* lets users automatically claim a license for a product the first time that they sign into an app that requires a license. By using auto-claim policies, you manage the products for which users can automatically claim licenses. You can also control which products those licenses come from.
 
 > [!IMPORTANT]
-> Auto-claim policies are currently only available for Microsoft Teams. More products will be available to use in the future.
+> Auto-claim policies are currently only available on a product-by-product basis.
 
 ## Before you begin
 
-You must be a Global, User, or License admin to create and manage auto-claim policies. For more information, see [About Microsoft 365 admin roles](../../admin/add-users/about-admin-roles.md).
+You must be a Global admin to create and manage auto-claim policies. For more information, see [About Microsoft 365 admin roles](../../admin/add-users/about-admin-roles.md).
 
 ## Turn the auto-claim policy feature on or off
 

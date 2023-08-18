@@ -3,26 +3,27 @@ title: Address false positives or false negatives in Microsoft 365 Defender
 description: Was something missed or wrongly detected by AIR in Microsoft 365 Defender? Learn how to submit false positives or false negatives to Microsoft for analysis.
 keywords: automated, investigation, alert, remediation, false positive, false negative
 search.appverid: met150
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
 f1.keywords: 
 - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: diannegali
+author: diannegali
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-- M365-security-compliance
-- m365initiative-m365-defender
+- m365-security
+- tier2
 ms.topic: how-to
 ms.custom: 
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.technology: m365d
+ms.date: 07/14/2023
 ---
 
 # Address false positives or false negatives in Microsoft 365 Defender
@@ -44,7 +45,7 @@ The following sections describe how to perform these tasks.
 
 |Item missed or wrongly detected |Service  |What to do  |
 |---------|---------|---------|
-|- Email message <br/>- Email attachment <br/>- URL in an email message<br/>- URL in an Office file      |[Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365)        |[Submit suspected spam, phish, URLs, and files to Microsoft for scanning](../office-365-security/admin-submission.md)         |
+|- Email message <br/>- Email attachment <br/>- URL in an email message<br/>- URL in an Office file      |[Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365)        |[Submit suspected spam, phish, URLs, and files to Microsoft for scanning](../office-365-security/submissions-admin.md)         |
 |File or app on a device    |[Microsoft Defender for Endpoint](/windows/security/threat-protection)         |[Submit a file to Microsoft for malware analysis](https://www.microsoft.com/wdsi/filesubmission)         |
 
 ## Adjust an alert to prevent false positives from recurring
@@ -70,3 +71,4 @@ If a remediation action was taken on an entity (such as a device or an email mes
 
 - [View the details and results of an automated investigation](m365d-autoir-results.md)
 - [Proactively hunt for threats with advanced hunting in Microsoft 365 Defender](advanced-hunting-overview.md)
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

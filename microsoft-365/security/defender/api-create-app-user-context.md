@@ -3,7 +3,8 @@ title: Create an app to access Microsoft 365 Defender APIs on behalf of a user
 description: Learn how to access Microsoft 365 Defender APIs on behalf of a user.
 keywords: access, on behalf of user, api, application, user, access token, token,
 search.product: eADQiWindows 10XVcnh
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -14,13 +15,16 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: conceptual
+ms.collection: 
+ - m365-security
+ - tier3
+ - must-keep
+ms.topic: reference
 search.appverid: 
   - MOE150
   - MET150
-ms.technology: m365d
 ms.custom: api
+ms.date: 02/16/2021
 ---
 
 # Create an app to access Microsoft 365 Defender APIs on behalf of a user
@@ -102,28 +106,31 @@ This article explains how to:
 
 For more information on Azure Active Directory tokens, see the [Azure AD tutorial](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
 
-### Get an access token using PowerShell
+### Get an access token on behalf of a user using PowerShell
+
+Use the MSAL.PS library to acquire access tokens with Delegated permissions. Run the following commands to get access token on behalf of a user:
 
 ```PowerShell
-if(!(Get-Package adal.ps)) { Install-Package -Name adal.ps } # Install the ADAL.PS package in case it's not already present
+Install-Module -Name MSAL.PS # Install the MSAL.PS module from PowerShell Gallery
 
-$tenantId = '' # Paste your directory (tenant) ID here.
-$clientId = '' # Paste your application (client) ID here.
-$redirectUri = '' # Paste your app's redirection URI
+$TenantId = " " # Paste your directory (tenant) ID here.
+$AppClientId="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" # Paste your application (client) ID here.
 
-$authority = "https://login.windows.net/$tenantId"
-$resourceUrl = 'https://api.security.microsoft.com'
+$MsalParams = @{
+   ClientId = $AppClientId
+   TenantId = $TenantId
+   Scopes   = 'https://graph.microsoft.com/User.Read.All','https://graph.microsoft.com/Files.ReadWrite'
+}
 
-$response = Get-ADALToken -Resource $resourceUrl -ClientId $clientId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:Always
-$response.AccessToken | clip
-
-$response.AccessToken
+$MsalResponse = Get-MsalToken @MsalParams
+$AccessToken  = $MsalResponse.AccessToken
+ 
+$AccessToken # Display the token in PS console
 ```
-
 ## Validate the token
 
 1. Copy and paste the token into [JWT](https://jwt.ms) to decode it.
-1. Make sure that the *roles* claim within the decoded token contains the desired permissions.
+2. Make sure that the *roles* claim within the decoded token contains the desired permissions.
 
 In the following image, you can see a decoded token acquired from an app, with ```Incidents.Read.All```, ```Incidents.ReadWrite.All```, and ```AdvancedHunting.Read.All``` permissions:
 
@@ -156,3 +163,4 @@ The following example shows how to send a request to get a list of incidents **u
 - [Learn about API limits and licensing](api-terms.md)
 - [Understand error codes](api-error-codes.md)
 - [OAuth 2.0 authorization for user sign in and API access](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

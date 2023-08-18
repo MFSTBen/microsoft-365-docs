@@ -7,29 +7,32 @@ ms.author: deniseb
 manager: dansimp 
 audience: Admin
 ms.topic: overview
-ms.prod: m365-security
-ms.technology: mdb
+ms.service: microsoft-365-security
+ms.subservice: mdb
 ms.localizationpriority: medium
-ms.reviewer: shlomiakirav
+ms.reviewer: nehabha
+ms.date: 05/01/2023
 f1.keywords: NOCSH 
-ms.collection: M365-security-compliance
+ms.collection: 
+ - m365-security
+ - m365solution-mdb-setup
+ - highpri
+ - tier1
 ---
 
 # Set up email notifications
 
-You can set up email notifications for your security team. Then, as alerts are generated, or new vulnerabilities are discovered, people on your security team will be notified automatically. 
+This article describes how to set up email notifications for your security team.
+
+:::image type="content" source="media/mdb-setup-step4.png" alt-text="Visual depicting step 4 - set up email notifications for your security team.":::
+
+When you can set up email notifications for your security team, they can be notified via email whenever any alerts are generated, or new vulnerabilities are discovered. 
 
 ## What to do
 
 1. [Learn about types of email notifications](#types-of-email-notifications).
 2. [View and edit email notification settings](#view-and-edit-email-notifications).
 3. [Proceed to your next steps](#next-steps).
-
-
->
-> **Got a minute?**
-> Please take our <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">short survey about security</a>. We'd love to hear from you!
->
 
 ## Types of email notifications
 
@@ -45,7 +48,7 @@ When you set up email notifications, you can choose from two types, as described
 > 
 > Email notifications are a convenient way to help keep your security team informed, in real time. But there are others! For example, whenever your security team signs into the Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), they'll see cards highlighting new threats, alerts, and vulnerabilities. Defender for Business is designed to highlight important information that your security team cares about as soon as they sign in.
 > 
-> Your security team can also choose **Incidents** in the navigation pane to view information. To learn more, see [View and manage incidents in Microsoft Defender for Business](mdb-view-manage-incidents.md).
+> Your security team can also choose **Incidents** in the navigation pane to view information. To learn more, see [View and manage incidents in Defender for Business](mdb-view-manage-incidents.md).
 
 ## View and edit email notifications
 
@@ -70,4 +73,5 @@ To view or edit email notification settings for your company, follow these steps
 
 Proceed to:
 
-- [Step 4: Onboard devices to Microsoft Defender for Business](mdb-onboard-devices.md)
+- [Step 5: Onboard devices to Defender for Business](mdb-onboard-devices.md)
+- [Step 6: Set up, review, and edit your security policies and settings in Microsoft Defender for Business](mdb-configure-security-settings.md)

@@ -6,11 +6,12 @@ manager: scotv
 ms.date: 12/06/2021
 audience: Admin
 ms.topic: conceptual
-ms.service: o365-administration
+ms.service: microsoft-365-enterprise
 ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection:
+- scotvorg
 - Ent_O365
 - Strat_O365_Enterprise
 description: "Microsoft 365 network assessment"
@@ -85,9 +86,13 @@ The SharePoint Online assessment is made using the following table. Any download
 
 ## Microsoft Teams
 
-For Microsoft Teams the Network quality is measured as UDP latency, UDP jitter, and UDP packet loss. UDP is used for call and conferencing audio and video media connectivity for Microsoft Teams. This can be impacted by the same factors as for latency and download speed in addition to connectivity gaps in a network's UDP support since UDP is configured separately to the more common TCP protocol. The median (also known as the 50th percentile or P50 measure) is taken for all measurements over the previous three days. 
+For Microsoft Teams the Network quality is measured as UDP latency, UDP jitter, and UDP packet loss. UDP is used for call and conferencing audio and video media connectivity for Microsoft Teams. This can be impacted by the same factors as for latency and download speed in addition to connectivity gaps in a network's UDP support since UDP is configured separately to the more common TCP protocol. The median (also known as the 50th percentile or P50 measure) is taken for all measurements over the previous three days.
 
 We calculate a mean opinion score from these UDP measurements for a scale from one to five. Then we map that to the 0-100 points scale for the Microsoft Teams network assessment.  Overall good is over 87.5 points and overall bad is below 50 points.
+
+## Understanding test sampling
+
+Network test sampling does not include user or device identities and hence the size of offices and number of users in them is estimated. We use the number of test results from Exchange tests and the number of tests from SharePoint tests to do this. If no samples are received for the office location then summary assessment information is still shown for up to 60 days but detail information is not shown and that includes the estimated number users.
 
 ## Related topics
 

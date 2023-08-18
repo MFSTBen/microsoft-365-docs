@@ -4,12 +4,15 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
-ms-reviewer: ragovind
+ms.reviewer: ragovind
+ms.date: 7/03/2023
 audience: Admin
 ms.topic: article
-ms.prod: microsoft-365-lighthouse
+ms.service: microsoft-365-lighthouse
 ms.localizationpriority: medium
 ms.collection:
+- Tier1
+- scotvorg
 - M365-subscription-management
 - Adm_O365
 ms.custom:
@@ -25,15 +28,7 @@ To help you manage your tenant list in Microsoft 365 Lighthouse, you can apply c
 
 ## Before you begin
 
-To manage tenant tags, you must:
-
-- Meet the [requirements for Microsoft 365 Lighthouse](m365-lighthouse-requirements.md).
-
-- Complete the processes outlined in the [Sign up for Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) article.
-
-- Complete the processes outlined in the [Configure Microsoft 365 Lighthouse portal security](m365-lighthouse-configure-portal-security.md) article.
-
-- Be a Global Administrator of the partner tenant.
+You must be a Global Administrator of the partner tenant.
 
 ## Create a tag
 
@@ -41,7 +36,7 @@ To manage tenant tags, you must:
 
 2. Select **Manage Tags**.
 
-3. In the **Manage tags** pane, select **Add tag**.
+3. In the **Manage tags** pane, select **Create tag**.
 
 4. Enter a name and description.
 
@@ -63,13 +58,13 @@ To manage tenant tags, you must:
 
 1. In the left navigation pane in Lighthouse, select **Tenants**.
 
-2. From the tenant list, select the three dots (more actions) next to the tenant you want to tag.
+2. From the list of tenants, select the three dots (more actions) next to the tenant you want to tag.
 
 3. Select **Tags**.
 
 4. Select a tag from the list. You can select only one tag at a time.
 
-Tags that are already assigned to the tenant will have a check mark to the right of the tag name. You can also assign a tag to multiple tenants by selecting the checkbox next to each tenant in the list, selecting **Assign Tags**, and then selecting a tag from the list.
+Tags that are already assigned to the tenant have a check mark to the right of the tag name. You can also assign a tag to multiple tenants by selecting the checkbox next to each tenant in the list, selecting **Assign Tags**, and then selecting a tag from the list.
 
 > [!NOTE]
 > You can create up to 30 unique Tags and assign them to as many tenants as needed.
@@ -82,13 +77,15 @@ Tags that are already assigned to the tenant will have a check mark to the right
 
 3. In the **Manage tags** pane, select the tag that you want to delete.
 
-4. Select **Delete tag**.
+4. Select **Delete**.
+
+5. In the confirmation dialog, select **Confirm**.
 
 ## Remove a tag
 
 1. In the left navigation pane in Lighthouse, select **Tenants**.
 
-2. From the tenant list, select the three dots (more actions) next to the tenant you want to edit.
+2. From the list of tenants, select the three dots (more actions) next to the tenant you want to edit.
 
 3. Select **Tags**.
 
@@ -98,10 +95,11 @@ Tags that are currently assigned have a check mark to the right of the name. You
 
 ## Next steps
 
-After you've created and assigned tags, you can use them to filter your tenants. Go to any of the other pages (Users, Devices, Threat management, or Windows 365) and select one or more tags from the Tenant filter. You can create new tags to support specific views based on each page.
+After you've created and assigned tags, you can use them to filter your tenants. Go to any of the other pages (Users, Devices, Threat management, or Windows 365) and select one or more tags from the Tenants filter. You can create new tags to support specific views based on each page.
 
 ## Related content
 
-[Sign up for Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md) (article)\
-[Overview of the Device compliance page in Microsoft 365 Lighthouse](m365-lighthouse-device-compliance-page-overview.md) (article)\
+[Overview of the Tenants page](m365-lighthouse-tenants-page-overview.md) (article)\
+[View your Azure Active Directory roles in Microsoft 365 Lighthouse](m365-lighthouse-view-your-roles.md) (article)\
+[View tenant service health](m365-lighthouse-view-service-health.md) (article)\
 [Microsoft 365 Lighthouse FAQ](m365-lighthouse-faq.yml) (article)

@@ -4,7 +4,8 @@ description: Link query results to an incident
 keywords: advanced hunting, incident, pivot, entity, go hunt, relevant events, threat hunting, cyber threat hunting, search, query, telemetry, Microsoft 365, Microsoft 365 Defender
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -16,10 +17,11 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - M365-security-compliance
+  - m365-security
   - m365initiative-m365-defender
-ms.topic: article
-ms.technology: m365d
+  - tier1
+ms.topic: conceptual
+ms.date: 06/25/2021
 ---
 
 # Link query results to an incident
@@ -29,7 +31,6 @@ ms.technology: m365d
 
 **Applies to:**
 - Microsoft 365 Defender
-- Microsoft Defender for Endpoint
 
 You can use the link to incident feature to add advanced hunting query results to a new or existing incident under investigation. This feature helps you easily capture records from advanced hunting activities, which enables you to create a richer timeline or context of events regarding an incident. 
 
@@ -85,3 +86,4 @@ You can also select the event to open the **Inspect record** pane.
 You can view which alerts were generated from advanced hunting by filtering the Incidents queue and Alerts queue by **Manual** detection source.
 
 :::image type="content" source="../../media/link-to-incident-8-filter.png" alt-text="The manual filtering of Incidents and Alerts queue in the Filters page in the Microsoft 365 Defender portal " lightbox="../../media/link-to-incident-8-filter.png":::
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

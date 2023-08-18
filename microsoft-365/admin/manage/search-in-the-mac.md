@@ -3,13 +3,16 @@ title: "Search for tasks or documentation in the Microsoft 365 admin center"
 f1.keywords:
 - NOCSH
 ms.author: kwekua
-author: kwekua
+author: kwekuako
 manager: scotv
+ms.date: 10/29/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: microsoft-365-business
 ms.localizationpriority: medium
 ms.collection:
+- Tier2
+- scotvorg
 - Adm_O365
 - Adm_TOC
 ms.custom: AdminSurgePortfolio

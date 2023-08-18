@@ -2,7 +2,7 @@
 title: Get machine logon users API
 description: Learn how to use the Get machine logon users API to retrieve a collection of logged on users on a device in Microsoft Defender for Endpoint.
 keywords: apis, graph api, supported apis, get, device, log on, users
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -11,10 +11,15 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: article
-MS.technology: mde
+ms.collection: 
+- m365-security
+- tier3
+- must-keep
+ms.topic: reference
+ms.subservice: mde
 ms.custom: api
+search.appverid: met150
+ms.date: 12/18/2020
 ---
 
 # Get machine logon users API
@@ -54,6 +59,8 @@ Delegated (work or school account) | User.Read.All | 'Read user profiles'
 >
 > - The user needs to have at least the following role permission: 'View Data'. For more information, see [Create and manage roles](user-roles.md).
 > - Response will include users only if the device is visible to the user, based on device group settings. For more information, see [Create and manage device groups](machine-groups.md).
+>
+> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## HTTP request
 
@@ -73,13 +80,13 @@ Empty
 
 ## Response
 
-If successful and device exists - 200 OK with list of [user](user.md) entities in the body. If device was not found - 404 Not Found.
+If successful and device exists - 200 OK with list of [user](user.md) entities in the body. If device wasn't found - 404 Not Found.
 
 ## Example
 
 ### Request
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/logonusers
@@ -87,7 +94,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c29
 
 ### Response
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```http
 HTTP/1.1 200 OK
@@ -109,3 +116,4 @@ Content-type: application/json
     ]
 }
 ```
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

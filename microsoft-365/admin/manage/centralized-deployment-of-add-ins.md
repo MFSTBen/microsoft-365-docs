@@ -3,13 +3,16 @@ title: "Determine if Centralized Deployment of add-ins works for your organizati
 f1.keywords:
 - NOCSH
 ms.author: kwekua
-author: kwekua
+author: kwekuako
 manager: scotv
+ms.date: 02/18/2020
 audience: Admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: microsoft-365-business
 ms.localizationpriority: medium
 ms.collection:
+- Tier2
+- scotvorg
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
@@ -31,17 +34,17 @@ Centralized Deployment is the recommended and most feature-rich way for most cus
 Centralized Deployment provides the following benefits:
 
 - An admin can deploy and assign an add-in directly to a user, to multiple users via a group, or to everyone in the organization (see Admin requirement section for information).
-- When the relevant Office application starts, the add-in automatically downloads. If the add-in supports add-in commands, the add-in automatically appears in the ribbon within the Office application.
+- When the relevant Microsoft 365 app starts, the add-in automatically downloads. If the add-in supports add-in commands, the add-in automatically appears in the ribbon within the Microsoft 365 app.
 - Add-ins no longer appear for users if the admin turns off or deletes the add-in, or if the user is removed from Azure Active Directory or from a group that the add-in is assigned to.
 
-Centralized Deployment supports three desktop platforms Windows, Mac and Online Office apps. Centralized Deployment also supports iOS and Android (Outlook Mobile Add-ins Only).
+Centralized Deployment supports three desktop platforms Windows, Mac and Microsoft 365 for the web. Centralized Deployment also supports iOS and Android (Outlook Mobile Add-ins Only).
 
 It can take up to 24 hours for an add-in to show up for client for all users.
 
 ## Before you begin
 
-Centralized deployment of add-ins requires that the users are using Microsoft 365 Business licenses (Business Basic, Business Standard, Business Premium), Office 365 Enterprise licenses (E1/E3/E5/F3), or Microsoft 365 Enterprise licenses (E3/E5/F3) (and are signed into Office using their organizational ID), Office 365 Education licenses (A1/A3/A5), or Microsoft 365 Education licenses (A3/A5), and have Exchange Online and active Exchange Online mailboxes. Your subscription directory must either be in or federated to Azure Active Directory.
-You can view specific requirements for Office and Exchange below, or use the [Centralized Deployment Compatibility Checker](#centralized-deployment-compatibility-checker).
+Centralized deployment of add-ins requires that the users are using Microsoft 365 Business licenses (Business Basic, Business Standard, Business Premium), Office 365 Enterprise licenses (E1/E3/E5/F3), or Microsoft 365 Enterprise licenses (E3/E5/F3) (and are signed in Microsoft 365 using their organizational ID), Office 365 Education licenses (A1/A3/A5), or Microsoft 365 Education licenses (A3/A5), and have Exchange Online and active Exchange Online mailboxes. Your subscription directory must either be in or federated to Azure Active Directory.
+You can view specific requirements for Microsoft 365 and Exchange below, or use the [Centralized Deployment Compatibility Checker](#centralized-deployment-compatibility-checker).
 
 Centralized Deployment doesn't support the following:
 
@@ -53,7 +56,7 @@ Centralized Deployment doesn't support the following:
 - Deployment of Component Object Model (COM) or Visual Studio Tools for Office (VSTO) add-ins.
 - Deployments of Microsoft 365 that do not include Exchange Online such as SKUs: Microsoft 365 Apps for Business and Microsoft 365 Apps for Enterprise.
 
-### Office Requirements
+### Microsoft 365 Requirements
 
 - For Word, Excel, and PowerPoint add-ins, your users must be using one of the following:
   - On a Windows device, Version 1704 or later of Microsoft 365 Business licenses (Business Basic, Business Standard, Business Premium), Office 365 Enterprise licenses (E1/E3/E5/F3), or Microsoft 365 Enterprise licenses (E3/E5/F3).
@@ -76,6 +79,22 @@ Microsoft Exchange stores the add-in manifests within your organization's tenant
 
 Check with your organization's Exchange admin to find out which configuration is in use. OAuth connectivity per user can be verified by using the [Test-OAuthConnectivity](/powershell/module/exchange/test-oauthconnectivity) PowerShell cmdlet.
 
+### Exchange Online user role requirements
+
+Use the classic Exchange admin center (EAC) to assign permissions to users. The permissions required to view and modify deployed add-ins are detailed in the following steps.
+
+1.	Log in to the classic EAC as a global administrator.
+2.	Go to **Permissions** and then select **User Roles**.
+3.	Select an existing role assignment policy or create a new policy.
+4.	Type a name for the policy if you are creating a new policy.
+5.	Select the following roles: **My Custom Apps**, **My MarketPlace Apps**, and **My ReadWriteMailbox Apps**.
+6.	Select **Save**.
+
+> [!NOTE]
+> These roles are selected by default.
+
+For more information, see [Manage role groups in Exchange Online](/exchange/permissions-exo/role-groups). For a detailed description of the different roles, see [Role assignment policies in Exchange Online](/exchange/permissions-exo/role-assignment-policies).
+
 ### Admin requirements
 
 In order to deploy an add-in via Centralized Deployment, you need to be either a Global admin or an Exchange admin in the organization.
@@ -87,7 +106,7 @@ In order to deploy an add-in via Centralized Deployment, you need to be either a
 
 ### Centralized Deployment Compatibility Checker
 
-Using the Centralized Deployment Compatibility Checker, you can verify whether the users on your tenant are set up to use Centralized Deployment for Word, Excel and PowerPoint. The Compatibility Checker is not required for Outlook support. Download the [compatibility checker](https://aka.ms/officeaddindeploymentorgcompatibilitychecker).
+Using the Centralized Deployment Compatibility Checker, you can verify whether the users on your tenant are set up to use Centralized Deployment for Word, Excel, and PowerPoint. The Compatibility Checker is not required for Outlook support. Download and install the [compatibility checker](https://aka.ms/officeaddindeploymentorgcompatibilitychecker).
 
 #### Run the compatibility checker
 
@@ -115,16 +134,18 @@ When the tool finishes running, it produces an output file in comma-separated (.
 - User Name
 - User ID (User's email address)
 - Centralized Deployment ready - If the remaining items are true
-- Office plan - The plan of Office they are licensed for
-- Office Activated - If they have activated Office
+- Microsoft 365 plan - The plan of Office they are licensed for
+- Microsoft 365 Activated - If they have activated Microsoft 365
 - Supported Mailbox - If they are on an OAuth-enabled mailbox
+
+Should your Microsoft 365 reports show anonymous user names instead of actual user names, fix this issue by changing the reports setting in Microsoft 365 admin center. For detailed steps, see [Microsoft 365 reports show anonymous user names instead of actual user names](/office365/troubleshoot/miscellaneous/reports-show-anonymous-user-name).
 
 > [!NOTE]
 > Multifactor authentication is not supported when using the Central Deployment PowerShell module. The module only works with Basic authentication.
 
 ## User and group assignments
 
-The Centralized Deployment feature currently supports the majority of groups supported by Azure Active Directory, including Microsoft 365 groups, distribution lists, and security groups.
+The Centralized Deployment feature currently supports the majority of groups supported by Azure Active Directory, including Microsoft 365 groups, distribution lists, dynamic groups, and security groups.
 
 > [!NOTE]
 > Non-mail enabled security groups are not currently supported.
@@ -149,11 +170,11 @@ Alternately, you can use the Azure Active Directory Graph API to run queries to 
 
 ### Contacting Microsoft for support
 
-If you or your users encounter problems loading the add-in while using Office apps for the web (Word, Excel, etc.), which were centrally deployed, you may need to contact Microsoft support ([learn how](../../business-video/get-help-support.md). Provide the following information about your Microsoft 365 environment in the support ticket.
+If you or your users encounter problems loading the add-in while using Microsoft 365 apps for the web (Word, Excel, etc.), which were centrally deployed, you may need to contact Microsoft support ([learn how](../../business-video/get-help-support.md). Provide the following information about your Microsoft 365 environment in the support ticket.
 
 |Platform|Debug information|
 |---|---|
-|Office|Charles/Fiddler logs <br/> Tenant ID ([learn how](/onedrive/find-your-office-365-tenant-id)) <br/> CorrelationID. View the source of one of the office pages and look for the Correlation ID value and send it to support:  <br/>`<input name=" **wdCorrelationId**" type="hidden" value=" **{BC17079E-505F-3000-C177-26A8E27EB623}**">` <br/> `<input name="user_id" type="hidden" value="1003bffd96933623"></form>`|
+|Microsoft 365|Charles/Fiddler logs <br/> Tenant ID ([learn how](/onedrive/find-your-office-365-tenant-id)) <br/> CorrelationID. View the source of one of the office pages and look for the Correlation ID value and send it to support:  <br/>`<input name=" **wdCorrelationId**" type="hidden" value=" **{BC17079E-505F-3000-C177-26A8E27EB623}**">` <br/> `<input name="user_id" type="hidden" value="1003bffd96933623"></form>`|
 |Rich clients (Windows, Mac)|Charles/Fiddler logs <br/> Build numbers of the client app (preferably as a screenshot from **File/Account**)|
 
 ## Related content
@@ -161,4 +182,4 @@ If you or your users encounter problems loading the add-in while using Office ap
 [Deploy add-ins in the admin center](../manage/manage-deployment-of-add-ins.md) (article)\
 [Manage add-ins in the admin center](manage-addins-in-the-admin-center.md) (article)\
 [Centralized Deployment FAQ](../manage/centralized-deployment-faq.yml) (article)\
-[Upgrade your Microsoft 365 for business users to the latest Office client](../setup/upgrade-users-to-latest-office-client.md) (article)
+[Upgrade your Microsoft 365 for business users to the latest version](../setup/upgrade-users-to-latest-office-client.md) (article)

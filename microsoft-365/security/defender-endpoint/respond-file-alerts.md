@@ -1,19 +1,19 @@
 ---
 title: Take response actions on a file in Microsoft Defender for Endpoint
 description: Take response actions on file-related alerts by stopping and quarantining a file or blocking a file and checking activity details.
-keywords: respond, stop and quarantine, block file, deep analysis
-ms.prod: m365-security
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
-ms.author: macapara
-author: mjcaparas
+ms.service: microsoft-365-security
+ms.author: diannegali
+author: diannegali
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: article
-ms.technology: mde
+ms.collection: 
+- m365-security
+- tier2
+ms.topic: conceptual
+ms.subservice: mde
+search.appverid: met150
+ms.date: 08/07/2023
 ---
 
 # Take response actions on a file
@@ -36,13 +36,16 @@ Response actions are available on a file's detailed profile page. Once on this p
 
 Response actions run along the top of the file page, and include:
 
-- Stop and Quarantine File
-- Add Indicator
-- Download file
-- Consult a threat expert
-- Action center
+- Stop and quarantine file
+- Manage indicator
+- Download file 
+- Collect file
+- Ask Defender Experts
+- Manual actions
+- Go hunt
+- Deep analysis
 
-You can also submit files for deep analysis, to run the file in a secure cloud sandbox. When the analysis is complete, you'll get a detailed report that provides information about the behavior of the file. You can submit files for deep analysis and read past reports by selecting the **Deep analysis** tab. It's located below the file information cards.
+You can also submit files for deep analysis, to run the file in a secure cloud sandbox. When the analysis is complete, you'll get a detailed report that provides information about the behavior of the file. You can submit files for deep analysis and read past reports by selecting the **Deep analysis** action.
 
 Some actions require certain permissions. The following table describes what action certain permissions can take on portable executable (PE) and non-PE files:
 
@@ -62,13 +65,13 @@ You can contain an attack in your organization by stopping the malicious process
 > [!IMPORTANT]
 > You can only take this action if:
 >
-> - The device you're taking the action on is running Windows 10, version 1703 or later, and Windows 11
+> - The device you're taking the action on is running Windows 10, version 1703 or later, Windows 11, and Windows Server 2012 R2+
 > - The file does not belong to trusted third-party publishers or is not signed by Microsoft
 > - Microsoft Defender Antivirus must at least be running on Passive mode. For more information, see [Microsoft Defender Antivirus compatibility](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
 
 The **Stop and Quarantine File** action includes stopping running processes, quarantining the files, and deleting persistent data such as registry keys.
 
-This action takes effect on devices with Windows 10, version 1703 or later, and Windows 11, where the file was observed in the last 30 days.
+This action takes effect on devices with Windows 10, version 1703 or later, and Windows 11 and Server 2012 R2+, where the file was observed in the last 30 days.
 
 > [!NOTE]
 > You'll be able to restore the file from quarantine at any time.
@@ -77,7 +80,7 @@ This action takes effect on devices with Windows 10, version 1703 or later, and 
 
 1. Select the file you want to stop and quarantine. You can select a file from any of the following views or use the Search box:
 
-   - **Alerts** - click the corresponding links from the Description or Details in the Alert Story timeline
+   - **Alerts** - select the corresponding links from the Description or Details in the Alert Story timeline
    - **Search box** - select **File** from the drop-down menu and enter the file name
 
    > [!NOTE]
@@ -102,7 +105,7 @@ This action takes effect on devices with Windows 10, version 1703 or later, and 
 
 4. Select any of the status indicators to view more information about the action. For example, select **Failed** to see where the action failed.
 
-#### Notification on device userf
+#### Notification on device user
 
 When the file is being removed from a device, the following notification is shown:
 
@@ -142,6 +145,28 @@ Selecting **Download file** from the response actions allows you to download a l
 
 By default, you should be able to download files that are in quarantine.
 
+The **Download file** button can have the following states:
+
+- **Active** - You'll be able to collect the file. 
+
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you may not have appropriate RBAC permissions to collect files.
+
+  The following permissions are required:
+
+  For Microsoft 365 Defender Unified role-based access control (RBAC):
+
+     - Add file collection permission in Microsoft 365 Defender Unified (RBAC)
+ 
+  For Microsoft Defender for Endpoint role-based access control (RBAC):
+
+    For Portable Executable file (.exe, .sys, .dll, and others)
+    - Global admin or Advanced live response or Alerts 
+
+    Non-Portable Executable file (.txt, .docx, and others) 
+    - Global admin or Advanced live response
+    - Tenants with [role-based access (RBAC) permissions](../defender/manage-rbac.md) enabled
+
+
 :::image type="content" source="images/atp-download-file-action.png" alt-text="The download file action" lightbox="images/atp-download-file-action.png":::
 
 ### Download quarantined files
@@ -150,26 +175,46 @@ Files that have been quarantined by Microsoft Defender Antivirus or your securit
 
 The location depends on your organization's geo settings (either EU, UK, or US). A quarantined file will only be collected once per organization. Learn more about Microsoft's data protection from the Service Trust Portal at https://aka.ms/STP.
 
-Having this setting turned on can help security teams examine potentially bad files and investigate incidents quickly and in a less risky way. However, if you need to turn this setting off, go to **Settings** \> **Endpoints** \> **Advanced features** \> **Download quarantined files** to adjust the setting. [Learn more about advanced features](advanced-features.md)
+Having this setting turned on can help security teams examine potentially bad files and investigate incidents quickly and in a less risky way. However, if you need to turn off this setting, go to **Settings** \> **Endpoints** \> **Advanced features** \> **Download quarantined files** to adjust the setting. [Learn more about advanced features](advanced-features.md)
 
 #### Backing up quarantined files
 
 Users may be prompted to provide explicit consent before backing up the quarantined file, depending on your [sample submission configuration](enable-cloud-protection-microsoft-defender-antivirus.md#use-group-policy-to-turn-on-cloud-protection).
 
-This feature will not work if sample submission is turned off. If automatic sample submission is set to request permission from the user, only samples that the user agrees to send will be collected.
+This feature won't work if sample submission is turned off. If automatic sample submission is set to request permission from the user, only samples that the user agrees to send will be collected.
 
 > [!IMPORTANT]
 > Download quarantined file requirements:
 >
 > - Your organization uses Microsoft Defender Antivirus in active mode
-> - Antivirus engine version is 1.1.17300.4 or later. See [Monthly platform and engine versions](manage-updates-baselines-microsoft-defender-antivirus.md#monthly-platform-and-engine-versions)
+> - Antivirus engine version is 1.1.17300.4 or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#monthly-platform-and-engine-versions)
 > - Cloud–based protection is enabled. See [Turn on cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md)
 > - Sample submission is turned on
 > - Devices have Windows 10 version 1703 or later, or Windows server 2016 or 2019, or Windows Server 2022, or Windows 11
 
 ### Collect files
 
-If a file is not already stored by Microsoft Defender for Endpoint, you can't download it. Instead, you'll see a **Collect file** button in the same location. If a file hasn't been seen in the organization in the past 30 days, **Collect file** will be disabled.
+If a file isn't already stored by Microsoft Defender for Endpoint, you can't download it. Instead, you'll see a **Collect file** button in the same location.
+
+The **Collect file** button can have the following states:
+
+- **Active** - You'll be able to collect the file. 
+
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you may not have appropriate RBAC permissions to collect files. 
+
+
+    The following permissions are required: 
+
+    For Portable Executable file (.exe, .sys, .dll, and others)
+    - Global admin or Advanced live response or Alerts 
+
+    Non-Portable Executable file (.txt, .docx, and others) 
+    - Global admin or Advanced live response
+
+
+If a file hasn't been seen in the organization in the past 30 days, **Collect file** will be disabled. 
+
+
 > [!Important]
 > A file that was quarantined as a potential network threat might not be recoverable. If a user attempts to restore the file after quarantine, that file might not be accessible. This can be due to the system no longer having network credentials to access the file. Typically, this is a result of a temporary log on to a system or shared folder and the access tokens expired.
 
@@ -209,9 +254,9 @@ You can also edit indicators from  the **Settings** page, under **Rules** \> **I
 
 ## Consult a threat expert
 
-Consult a Microsoft threat expert for more insights on a potentially compromised device, or already compromised devices. Microsoft Threat Experts are engaged directly from within the Microsoft 365 Defender portal for timely and accurate response. Experts provide insights on a potentially compromised device and help you understand complex threats and targeted attack notifications. They can also provide information about the alerts or a threat intelligence context that you see on your portal dashboard.
+Select Ask Defender Experts to get more insights from Microsoft experts on a potentially compromised device, or already compromised devices. Microsoft Defender Experts are engaged directly from within the Microsoft 365 Defender portal for timely and accurate response. Experts provide insights on a potentially compromised device and help you understand complex threats and targeted attack notifications. They can also provide information about the alerts or a threat intelligence context that you see on your portal dashboard.
 
-See [Consult a Microsoft Threat Expert](/microsoft-365/security/defender-endpoint/configure-microsoft-threat-experts#consult-a-microsoft-threat-expert-about-suspicious-cybersecurity-activities-in-your-organization) for details.
+See [Ask Defender Experts](experts-on-demand.md) for details.
 
 ## Check activity details in Action center
 
@@ -239,16 +284,19 @@ The deep analysis summary includes a list of observed *behaviors*, some of which
 
 Results of deep analysis are matched against threat intelligence and any matches will generate appropriate alerts.
 
-Use the deep analysis feature to investigate the details of any file, usually during an investigation of an alert or for any other reason where you suspect malicious behavior. This feature is available within the **Deep analysis** tab, on the file's profile page.
+Use the deep analysis feature to investigate the details of any file, usually during an investigation of an alert or for any other reason where you suspect malicious behavior. This feature is available at the top of the file's page. Select the three dots to access the **Deep analysis** action.
 
+:::image type="content" source="../../media/defender-endpoint/deep-analysis.png" alt-text="Screenshot of the Deep analysis action" lightbox="../../media/defender-endpoint/deep-analysis.png":::
+
+Learn about deep analysis in the following video:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4aAYy?rel=0]
 
 **Submit for deep analysis** is enabled when the file is available in the Defender for Endpoint backend sample collection, or if it was observed on a Windows 10 device that supports submitting to deep analysis.
 
 > [!NOTE]
-> Only files from Windows 10 and Windows 11 can be automatically collected.
+> Only files from Windows 10, Windows 11, and Windows Server 2012 R2+ can be automatically collected.
 
-You can also submit a sample through the [Microsoft 365 Defender Portal](https://www.microsoft.com/security/portal/submission/submit.aspx) if the file wasn't observed on a Windows 10 device (or Windows 11), and wait for **Submit for deep analysis** button to become available.
+You can also submit a sample through the [Microsoft 365 Defender Portal](https://www.microsoft.com/security/portal/submission/submit.aspx) if the file wasn't observed on a Windows 10 device (or Windows 11 or Windows Server 2012 R2+), and wait for **Submit for deep analysis** button to become available.
 
 > [!NOTE]
 > Due to backend processing flows in the Microsoft 365 Defender Portal, there could be up to 10 minutes of latency between file submission and availability of the deep analysis feature in Defender for Endpoint.
@@ -271,7 +319,7 @@ You can also submit a sample through the [Microsoft 365 Defender Portal](https:/
    A progress bar is displayed and provides information on the different stages of the analysis. You can then view the report when the analysis is done.
 
 > [!NOTE]
-> Depending on device availability, sample collection time can vary. There is a 3-hour timeout for sample collection. The collection will fail and the operation will abort if there is no online Windows 10 device (or Windows 11) reporting at that time. You can re-submit files for deep analysis to get fresh data on the file.
+> Depending on device availability, sample collection time can vary. There is a 3-hour timeout for sample collection. The collection will fail and the operation will abort if there is no online Windows 10 device (or Windows 11 or Windows Server 2012 R2+) reporting at that time. You can re-submit files for deep analysis to get fresh data on the file.
 
 ### View deep analysis reports
 
@@ -312,10 +360,11 @@ If you come across a problem when trying to submit a file, try each of the follo
 
 5. Change the organizational unit through the Group Policy. For more information, see [Configure with Group Policy](configure-endpoints-gp.md).
 
-6. If these steps do not resolve the issue, contact support.
+6. If these steps don't resolve the issue, contact support.
 
 ## Related topics
 
 - [Take response actions on a device](respond-machine-alerts.md)
 - [Investigate files](investigate-files.md)
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

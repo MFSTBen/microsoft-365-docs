@@ -3,13 +3,16 @@ title: "Multifactor authentication for Microsoft 365"
 f1.keywords:
 - NOCSH
 ms.author: kwekua
-author: kwekua
+author: kwekuako
 manager: scotv
+ms.date: 05/21/2020
 audience: Admin
 ms.topic: conceptual
-ms.service: o365-administration
+ms.service: microsoft-365-business
 ms.localizationpriority: medium
 ms.collection: 
+- Tier1
+- scotvorg
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
@@ -57,7 +60,7 @@ These ways are based on your Microsoft 365 plan.
 |Plan|Recommendation|Type of customer|
 |---|---|---|
 |All Microsoft 365 plans|Use security defaults, which require MFA for all user accounts. <p> You can also configure per-user MFA on individual user accounts, but this isn't recommended.|Small business|
-|Microsoft 365 Business Premium <p> Microsoft 365 E3 <p> Azure Active Directory (Azure AD) Premium P1 licenses|Use [security defaults or Conditional Access policies](/microsoft-365/business-premium/m365bp-conditional-access) to require MFA for user accounts based on group membership, apps, or other criteria.|Small business to enterprise|
+|Microsoft 365 Business Premium <p> Microsoft 365 E3 <p> Azure Active Directory (Azure AD) Premium P1 licenses|Use [security defaults or Conditional Access policies](/microsoft-365/business-premium/m365bp-turn-on-mfa) to require MFA for user accounts based on group membership, apps, or other criteria.|Small business to enterprise|
 |Microsoft 365 E5 <p> Azure AD Premium P2 licenses|Use Azure AD Identity Protection to require MFA based on sign-in risk criteria.|Enterprise|
 ||||
 
@@ -165,7 +168,7 @@ In the Azure portal, you can:
 - Enable and disable security defaults
 - Configure Conditional Access policies
 
-In the Microsoft 365 admin center, you can configure per-user and service <a href="https://go.microsoft.com/fwlink/p/?linkid=2169174" target="_blank">MFA settings</a>.
+In the Microsoft 365 admin center, you can configure per-user and service <a href="https://go.microsoft.com/fwlink/?LinkId=279980" target="_blank">MFA settings</a>.
 
 ## Next steps
 

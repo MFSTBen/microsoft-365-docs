@@ -4,7 +4,7 @@ description: Learn how to list live response library files.
 keywords: apis, graph api, supported apis, get, devices
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -16,10 +16,13 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-- M365-security-compliance 
+- m365-security
+- tier3
+- must-keep
 ms.topic: reference
-MS.technology: mde
+ms.subservice: mde
 ms.custom: api
+ms.date: 06/03/2021
 ---
 
 #  List library files 
@@ -131,3 +134,4 @@ Content-type: application/json
 
 ## Related topic
 - [Run live response](run-live-response.md) 
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

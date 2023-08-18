@@ -5,21 +5,21 @@ f1.keywords:
 ms.author: tracyp
 author: MSFTTracyP
 manager: dansimp
-ms.date: 09/03/2021
+ms.date: 1/31/2023
 audience: ITPro
-ms.topic: article
+ms.topic: conceptual
 ms.localizationpriority: high
 search.appverid:
   - MET150
 ms.assetid: 56fee1c7-dc37-470e-9b09-33fff6d94617
 ms.collection:
-  - M365-security-compliance
-  - m365initiative-defender-office365
+  - m365-security
+  - tier1
 ms.custom:
   - seo-marvel-apr2020
 description: Learn to integrate Azure PIM in order to grant just-in-time, time limited access to users to do elevated privilege tasks in Microsoft Defender for Office 365, lowering risk to your data.
-ms.technology: mdo
-ms.prod: m365-security
+ms.subservice: mdo
+ms.service: microsoft-365-security
 ---
 <!--A-->
 # Privileged Identity Management (PIM) and why to use it with Microsoft Defender for Office 365
@@ -33,7 +33,7 @@ Privileged Identity Management (PIM) is an Azure feature that, once set up, give
 
 By setting up PIM to work with Defender for Office 365, admins create a process for a user to request access to take the actions they need. The user must *justify* the need for the elevation of their privileges.
 
-In this example we will configure "Alex", a member of our security team who will have zero-standing access within Office 365, but can elevate to both a role required for normal day-to-day operations, such as [Threat Hunting](threat-hunting-in-threat-explorer.md) and then also to a higher level of privilege when less frequent but sensitive operations, such as [remediating malicious delivered email](remediate-malicious-email-delivered-office-365.md) is required.
+In this example we will configure "Alex", a member of our security team who will have zero-standing access within Office 365, but can elevate to both a role required for normal day-to-day operations, such as [Threat Hunting](threat-explorer-threat-hunting.md) and then also to a higher level of privilege when less frequent but sensitive operations, such as [remediating malicious delivered email](remediate-malicious-email-delivered-office-365.md) is required.
 
 > [!NOTE]
 > This will walk you through the steps required to setup PIM for a Security Analyst who requires the ability to purge emails using Threat Explorer in Microsoft Defender for Office 365, but the same steps can be used for other RBAC roles within the Security, and Compliance portal. For example this process could be used for a information worker who requires day-to-day access in eDiscovery to perform searches and case work, but only occasionally needs the elevated right to export data from the tenant.
@@ -45,7 +45,7 @@ In this example we will configure "Alex", a member of our security team who will
 3. Set the '**Activation maximum duration (hours)**' to a normal working day and 'On activation' to require **Azure MFA**.
 4. As this is Alex's normal privilege level for day-to-day operations, we will Uncheck **Require justification on activation**' > **Update**.
 5. Select **Add Assignments** > **No member selected** > select or type the name to search for the correct member.
-6. Click the **Select** button to choose the member you need to add for PIM privileges > click **Next** > make no changes on the Add Assignment page (both assignment type *Eligible* and duration *Permanently Eligible* will be defaults ) and **Assign**.
+6. Click the **Select** button to choose the member you need to add for PIM privileges > click **Next** > make no changes on the Add Assignment page (both assignment type *Eligible* and duration *Permanently Eligible* will be defaults) and **Assign**.
 
 The name of your user (here 'Alex') will appear under Eligible assignments on the next page, this means they are able to PIM into the role with the settings configured earlier.
 
@@ -62,7 +62,7 @@ Using [Privileged Access groups](/azure/active-directory/privileged-identity-man
 
 In the Microsoft 365 Defender portal, create a custom role group that contains the permissions that we want.
 
-1. In the Microsoft 365 Defender portal at <https://security.microsoft.com>, go to **Permissions & Roles**, and then select **Roles** under **Email and Collaboration**. To go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
+1. In the Microsoft 365 Defender portal at <https://security.microsoft.com>, go to **Permissions** \> **Email & collaboration roles** \> **Roles**. Or, to go directly to the **Permissions** page, use <https://security.microsoft.com/emailandcollabpermissions>.
 2. On the **Permissions** page, click ![Create icon.](../../media/m365-cc-sc-create-icon.png) **Create**.
 3. Name your group to reflect its purpose such as 'Search and Purge PIM'.
 4. Don't add members, simply save the group and move on to the next part!
@@ -80,10 +80,10 @@ In the Microsoft 365 Defender portal, create a custom role group that contains t
 
 ### Nest the newly created security group into the role group
 
-1. [Connect to Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
+1. [Connect to Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) and run the following command:
 
    ```powershell
-   Add-RoleGroupMember "<<Role Group Name>>" -Member "<<Azure Security Group>>"`
+   Add-RoleGroupMember "<Role Group Name>" -Member "<Azure Security Group>"`
    ```
 
 ## Test your configuration of PIM with Defender for Office 365

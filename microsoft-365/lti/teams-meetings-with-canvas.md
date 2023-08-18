@@ -4,12 +4,15 @@ ms.author: danismith
 author: DaniEASmith
 manager: serdars
 ms.reviewer: sovaish
+ms.date: 05/26/2021
 audience: admin
 ms.topic: article
-ms.service: o365-administration
+ms.service: microsoft-365-business
 f1.keywords:
 - CSH
-ms.collection: M365-modern-desktop
+ms.collection: 
+- M365-modern-desktop
+- tier2
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 description: "Integrate Microsoft Teams meetings with Canvas"
@@ -26,7 +29,8 @@ Microsoft Teams meetings is a Learning Tools Interoperability (LTI) app that hel
 >
 > - Your tenant must have an Microsoft Education license.
 > - Only a single Microsoft tenant can be used for mapping users between Canvas and Microsoft.
-> - You will have to turn off School Data Sync (SDS) before using the Class Teams LTI in order to avoid duplication of groups.
+> - If you plan to use the Microsoft Teams Sync feature of Canvas concurrently with Microsoft’s School Data Sync (SDS), don't include class and class roster data in your SDS sync. You can continue to use SDS to sync all other data including users, organizations, parent contacts, and demographics.
+> - You can use Teams Meetings LTI without enabling **Course Sync**. However, you won't be able to use the **Add entire class** option. You can either type or copy and paste attendees' email addresses, or add channels of existing teams to the meetings.
 
 ## Microsoft Office 365 Admin
 
@@ -66,7 +70,7 @@ Set up the Microsoft Teams LTI 1.3 Integration.
 
 As a Canvas Admin, you'll need to add the Microsoft Teams meetings LTI app within your environment. Make a note of the LTI Client ID for the app.
 
- - Microsoft Teams meetings - 170000000000703
+- Microsoft Teams meetings - 170000000000703
 
 1. Access **Admin settings** > **Apps**.
 

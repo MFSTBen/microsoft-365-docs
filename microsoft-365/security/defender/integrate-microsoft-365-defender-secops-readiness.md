@@ -3,7 +3,8 @@ title: Step 2. Perform a SOC integration readiness assessment using the Zero Tru
 description: The basics of performing a SOC integration readiness assessment using the Zero Trust Framework when integrating Microsoft 365 Defender into your security operations.
 keywords: incidents, alerts, investigate, correlation, attack, devices, users, identities, identity, mailbox, email, 365, microsoft, m365, incident response, cyber-attack, secops, security operations, soc
 search.product: eADQiWindows 10XVcnh
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -15,14 +16,16 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - M365-security-compliance
-  - m365solution-m365dsecops
+  - zerotrust-solution
+  - msftsolution-secops
+  - tier2
 ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.technology: m365d
+ms.date: 07/15/2021
 ---
+
 # Step 2. Perform a SOC integration readiness assessment using the Zero Trust Framework
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
@@ -49,3 +52,4 @@ Adoption procedures and use case creation are described in Steps 3 and 4.
 ## Next step
 
 [Step 3. Plan for Microsoft 365 Defender integration with your SOC catalog of services](integrate-microsoft-365-defender-secops-services.md)
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

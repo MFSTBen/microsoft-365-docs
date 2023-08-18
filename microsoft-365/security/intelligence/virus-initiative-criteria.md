@@ -2,18 +2,19 @@
 title: Microsoft Virus Initiative
 ms.reviewer: 
 description: The Microsoft Virus Initiative (MVI) helps organizations that make antivirus or antimalware products integrate with Windows and share telemetry with Microsoft.
-keywords: security, malware, MVI, Microsoft Malware Protection Center, MMPC, alliances, WDSI
-ms.prod: m365-security
-ms.mktglfcycl: secure
-ms.sitesec: library
+ms.service: microsoft-365-security
+ms.subservice: intelligence
 ms.localizationpriority: medium
 ms.author: dansimp
 author: dansimp
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: article
-ms.technology: m365d
+ms.collection: 
+- m365-security
+- tier2
+ms.topic: conceptual
+search.appverid: met150
+ms.date: 06/28/2023
 ---
 
 # Microsoft Virus Initiative

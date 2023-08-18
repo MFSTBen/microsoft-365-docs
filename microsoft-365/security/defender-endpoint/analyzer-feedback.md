@@ -2,7 +2,7 @@
 title:  Provide feedback on the Microsoft Defender for Endpoint Client Analyzer tool
 description: Provide feedback on the Microsoft Defender for Endpoint client analyzer tool
 keywords: sensor, sensor health, misconfigured, inactive, no sensor data, sensor data, impaired communications, communication
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -14,9 +14,12 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-- M365-security-compliance 
+- m365-security
+- tier2
 ms.topic: conceptual
-ms.technology: m365d
+ms.subservice: mde
+search.appverid: met150
+ms.date: 03/23/2021
 ---
 
 # Provide feedback on the Microsoft Defender for Endpoint client analyzer tool
@@ -34,3 +37,4 @@ If you have feedback or suggestions that would help us improve the Microsoft Def
 2. Microsoft 365 Defender portal (security.microsoft.com):
 
 :::image type="content" source="images/1d5b3c010b4b5c0e9d5eb43f71fa95e3.png" alt-text="The Give feedback button" lightbox="images/1d5b3c010b4b5c0e9d5eb43f71fa95e3.png":::
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

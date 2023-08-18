@@ -2,7 +2,7 @@
 title: Indicator resource type
 description: Specify the entity details and define the expiration of the indicator using Microsoft Defender for Endpoint.
 keywords: apis, supported apis, get, TiIndicator, Indicator, recent
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -11,10 +11,15 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: article
-MS.technology: mde
+ms.collection: 
+- m365-security
+- tier3
+- must-keep
+ms.topic: reference
+ms.subservice: mde
 ms.custom: api
+search.appverid: met150
+ms.date: 12/18/2020
 ---
 
 # Indicator resource type
@@ -50,7 +55,7 @@ id|String|Identity of the [Indicator](ti-indicator.md) entity.
 indicatorValue|String|The value of the [Indicator](ti-indicator.md).
 indicatorType|Enum|Type of the indicator. Possible values are: "FileSha1", "FileSha256", "FileMd5", "CertificateThumbprint", "IpAddress", "DomainName" and "Url".
 application|String|The application associated with the indicator.
-action|Enum|The action that will be taken if the indicator will be discovered in the organization. Possible values are: "Warn", "Block", "Audit", "Alert", "AlertAndBlock", "BlockAndRemediate" and "Allowed".
+action|Enum|The action that is taken if the indicator will be discovered in the organization. Possible values are: "Warn", "Block", "Audit", "Alert", "AlertAndBlock", "BlockAndRemediate" and "Allowed".
 |externalID|String|Id the customer can submit in the request for custom correlation.|
 sourceType|Enum|"User" in case the Indicator created by a user (for example, from the portal), "AadApp" in case it submitted using automated application via the API.
 createdBySource|string|The name of the user/application that submitted the indicator.
@@ -64,8 +69,8 @@ title|String|Indicator title.
 description|String|Description of the indicator.
 recommendedActions|String|Recommended actions for the indicator.
 rbacGroupNames|List of strings|RBAC device group names where the indicator is exposed and active. Empty list in case it exposed to all devices.
-rbacGroupIds|List of strings|RBAC device group ID's where the indicator is exposed and active. Empty list in case it exposed to all devices.
-generateAlert|Enum|**True** if alert generation is required, **False** if this indicator should not generate an alert.
+rbacGroupIds|List of strings|RBAC device group IDs where the indicator is exposed and active. Empty list in case it exposed to all devices.
+generateAlert|Enum|**True** if alert generation is required, **False** if this indicator shouldn't generate an alert.
 
 ## Indicator Types
 
@@ -106,3 +111,9 @@ For more information on the description of the response action types, see [Creat
     "rbacGroupNames": ["team1"]
 }
 ```
+
+## See also
+
+- [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

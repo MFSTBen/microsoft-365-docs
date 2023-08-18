@@ -2,7 +2,7 @@
 title: Get file information API
 description: Learn how to use the Get file information API to get a file by Sha1, Sha256, or MD5 identifier in Microsoft Defender for Endpoint.
 keywords: apis, graph api, supported apis, get, file, information, sha1, sha256, md5
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -11,10 +11,15 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
-ms.topic: article
-MS.technology: mde
+ms.collection: 
+- m365-security
+- tier3
+- must-keep
+ms.topic: reference
+ms.subservice: mde
 ms.custom: api
+search.appverid: met150
+ms.date: 12/18/2020
 ---
 
 # Get file information API
@@ -52,7 +57,7 @@ Delegated (work or school account)|File.Read.All|'Read all file profiles'
 > [!NOTE]
 > When obtaining a token using user credentials:
 >
-> - The user needs to have at least the following role permission: 'View Data' (See [Create and manage roles](user-roles.md) for more information)
+> - The user needs to have at least the following role permission: 'View Data' (For more information, see [Create and manage roles](user-roles.md))
 
 ## HTTP request
 
@@ -72,13 +77,13 @@ Empty
 
 ## Response
 
-If successful and file exists - 200 OK with the [file](files.md) entity in the body. If file does not exist - 404 Not Found.
+If successful and file exists - 200 OK with the [file](files.md) entity in the body. If file doesn't exist - 404 Not Found.
 
 ## Example
 
 ### Request example
 
-Here is an example of the request.
+Here's an example of the request.
 
 ```http
 GET https://api.securitycenter.microsoft.com/api/files/4388963aaa83afe2042a46a3c017ad50bdcdafb3
@@ -86,7 +91,7 @@ GET https://api.securitycenter.microsoft.com/api/files/4388963aaa83afe2042a46a3c
 
 ### Response example
 
-Here is an example of the response.
+Here's an example of the response.
 
 ```json
 {
@@ -109,3 +114,4 @@ Here is an example of the response.
     "determinationValue": "PUA:Win32/FusionCore"
 }
 ```
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

@@ -3,7 +3,8 @@ title: Turn on Microsoft 365 Defender
 description: Learn how to enable Microsoft 365 Defender and start integrating your security incident and response.
 keywords: get started, enable Microsoft 365 Defender, Microsoft 365 Defender, M365, security, data location, required permissions, license eligibility, settings page
 search.product: eADQiWindows 10XVcnh
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -14,12 +15,16 @@ author: dansimp
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
+ms.collection: 
+    - m365-security
+    - m365solution-getstarted
+    - highpri
+    - tier3
 ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.technology: m365d
+ms.date: 02/17/2021
 ---
 
 # Turn on Microsoft 365 Defender
@@ -63,6 +68,7 @@ Microsoft 365 Defender aggregates data from the various supported services that 
 To get the best protection and optimize Microsoft 365 Defender, we recommend deploying all applicable supported services on your network. For more information, [read about deploying supported services](deploy-supported-services.md).
 
 ## Onboard to the service
+
 Onboarding to Microsoft 365 Defender is simple. From the navigation menu, select any item, such as **Incidents & alerts**, **Hunting**, **Action center**, or **Threat analytics** to initiate the onboarding process. 
 
 ### Data center location
@@ -88,7 +94,8 @@ Once the service is provisioned, it adds:
 *Microsoft 365 Defender portal with incidents management and other capabilities*
 
 ### Getting Microsoft Defender for Identity data 
-To enable the integration with Microsoft Defender for Cloud Apps, you'll need to login to the Microsoft Defender for Cloud Apps at least once.
+
+To enable the integration with Microsoft Defender for Cloud Apps, you'll need to log in to the Microsoft Defender for Cloud Apps at least once.
 
 ## Get assistance
 
@@ -101,9 +108,11 @@ Microsoft support staff can help provision or deprovision the service and relate
 - [Frequently asked questions](m365d-enable-faq.md)
 - [Licensing requirements and other prerequisites](prerequisites.md)
 - [Deploy supported services](deploy-supported-services.md)
+- [Setup guides for Microsoft 365 Defender](deploy-configure-m365-defender.md)
 - [Microsoft 365 Defender overview](microsoft-365-defender.md)
 - [Microsoft Defender for Endpoint overview](../defender-endpoint/microsoft-defender-endpoint.md)
 - [Defender for Office 365 overview](../office-365-security/defender-for-office-365.md)
 - [Microsoft Defender for Cloud Apps overview](/cloud-app-security/what-is-cloud-app-security)
 - [Microsoft Defender for Identity overview](/azure-advanced-threat-protection/what-is-atp)
 - [Microsoft Defender for Endpoint data storage](../defender-endpoint/data-storage-privacy.md)
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

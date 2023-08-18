@@ -4,7 +4,7 @@ description: See associated alerts, manage the incident, and see alert metadata 
 keywords: investigate, incident, alerts, metadata, risk, detection source, affected devices, patterns, correlation
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
-ms.prod: m365-security
+ms.service: microsoft-365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -13,11 +13,12 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection:
-  - m365-security-compliance
-  - m365-initiative-defender-endpoint
-ms.topic: article
-ms.technology: mde
+ms.collection: 
+- m365-security
+- tier1
+ms.topic: conceptual
+ms.subservice: mde
+ms.date: 12/18/2020
 ---
 
 # Investigate incidents in Microsoft Defender for Endpoint
@@ -100,3 +101,4 @@ You can click the circles on the incident graph to view the details of the malic
 - [Incidents queue](/microsoft-365/security/defender-endpoint/view-incidents-queue)
 - [Investigate incidents in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/investigate-incidents)
 - [Manage Microsoft Defender for Endpoint incidents](/microsoft-365/security/defender-endpoint/manage-incidents)
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

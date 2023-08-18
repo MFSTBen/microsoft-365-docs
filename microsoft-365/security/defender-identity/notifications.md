@@ -3,12 +3,13 @@ title: Microsoft Defender for Identity notifications in Microsoft 365 Defender
 description: Learn how to set Microsoft Defender for Identity notifications in Microsoft 365 Defender.
 ms.date: 05/20/2021
 ms.topic: how-to
-author: dcurwin
-ms.author: dacurwin
+author: batamig
+ms.author: bagol
 ms.service: microsoft-defender-for-identity
 ms.custom: admindeeplinkDEFENDER
 manager: raynew
-ms.collection: M365-security-compliance
+ms.collection: m365-security
+search.appverid: met150
 ---
 
 # Defender for Identity notifications in Microsoft 365 Defender

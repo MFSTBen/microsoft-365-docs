@@ -3,7 +3,8 @@ title: Troubleshoot Microsoft 365 Defender service issues
 description: Find solutions and workarounds to known Microsoft 365 Defender issues
 keywords: troubleshoot Microsoft 365 Defender, troubleshoot, Microsoft Defender for Identity, issues, add-on, settings page
 search.product: eADQiWindows 10XVcnh
-ms.prod: m365-security
+ms.service: microsoft-365-security
+ms.subservice: m365d
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -14,12 +15,14 @@ author: mjcaparas
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
+ms.collection: 
+- m365-security-compliance
+- tier3
 ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
-ms.technology: m365d
+ms.date: 02/16/2021
 ---
 
 # Troubleshoot Microsoft 365 Defender service issues
@@ -51,3 +54,4 @@ To turn on Microsoft 365 Defender, access **Settings** from the navigation pane 
 ## How do I create an exception for my file/URL?
 
 A false positive is a file or URL that is detected as malicious but is not a threat. You can create indicators and define exclusions to unblock and allow certain files/URLs. See [Address false positives/negatives in Defender for Endpoint](/microsoft-365/security/defender-endpoint/defender-endpoint-false-positives-negatives).
+[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/defender-m3d-techcommunity.md)]

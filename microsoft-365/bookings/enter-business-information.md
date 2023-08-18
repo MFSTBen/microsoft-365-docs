@@ -3,10 +3,14 @@ title: "Enter your Bookings business information"
 ms.author: kwekua
 author: kwekuako
 manager: scotv
+ms.date: 06/18/2020
 audience: Admin
 ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
+ms.collection:
+- Tier1
+- scotvorg
 ms.assetid: 828a17db-956a-401e-bb62-d153b6dffd53
 description: "Follow these instructions to create your About Us page with business name, address, phone number, website URL, logo, and business hours in Microsoft Bookings."
 ---
@@ -28,7 +32,7 @@ The information you provide here will be displayed on the page customers and cli
 
 1. In the navigation pane, select **Your calendar** > **Business information** in the left pane.
 
-1. On the **Basic details** section, enter your business name, address, and phone number you would like to use for your Bookings calendar.
+1. On the **Basic details** section, enter your business name, address, and phone number you would like to use for your booking page.
 
 :::image type="content" source="../media/bookings-business-basic-details.png" alt-text="Screenshot: Page to enter your basic business information":::
 
